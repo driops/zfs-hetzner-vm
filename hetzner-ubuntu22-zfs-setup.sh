@@ -561,6 +561,7 @@ if [[ $v_swap_size -gt 0 ]]; then
 fi
 
 echo "======= setting up initial system packages =========="
+apt install -t bullseye-backports --yes debootstrap
 debootstrap --arch=amd64 jammy "$c_zfs_mount_dir" "$c_deb_packages_repo"
 
 zfs set devices=off "$v_rpool_name"
