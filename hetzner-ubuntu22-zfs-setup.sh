@@ -624,6 +624,7 @@ deb [arch=i386,amd64] $c_deb_security_repo jammy-security main restricted
 CONF
 
 chroot_execute "apt update"
+chroot_execute "apt --fix-broken --yes install"
 chroot_execute "apt upgrade --yes"
 
 echo "======= setting locale, console and language =========="
