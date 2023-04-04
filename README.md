@@ -12,6 +12,12 @@ __WARNING:__ all data on the disk will be destroyed.
 * Click "enable rescue and power cycle",  add SSH key to the rescue console, set it OS to linux64, then press mount rescue and power cycle" button.
 * connect via SSH to rescue console, and run the script from this repo.
 
+Ubuntu 22 LTS minimal setup with SSH server (**Testing: encryption not currently working)
+
+````bash
+wget -qO- https://raw.githubusercontent.com/driops/zfs-hetzner-vm/master/hetzner-ubuntu22-zfs-setup.sh | bash -
+````
+
 Debian 11 minimal setup with SSH server
 
 ````bash
